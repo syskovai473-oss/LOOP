@@ -3,18 +3,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 html,
 body{
     height: 100%;
     min-height: 100%;
 }
+html {
+  box-sizing: border-box;
+}
+
 body{
+    min-width: 1100px;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     font-family: "Montserrat", sans-serif;
 }
 main{
     flex-grow: 1;
+}
+header{
+    background: #F9F6F1;
 }
 .container{
     max-width: 1110px;
@@ -42,7 +58,58 @@ main{
     font-size: 21px;
 }
 /*----------------------------------section man-woman------------------------------------------------------*/
+.man-woman{
+    background: linear-gradient(90deg, #f9f6f1 0%, #f9f6f1 50%, #f9e0e0 50%, #f9e0e0 100%);
+}
 .man-woman .container{
     display: flex;
     flex-direction: row;
+}
+.man{
+    background: url(../img/man.png) no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+}
+.woman {
+    background: url(../img/woman.png) no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    padding-left: 35px;
+    
+}
+.man, 
+.woman{
+    width: 50%;
+    padding-top:60px ;
+    padding-bottom: 58px;
+}
+.man-woman h2{
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+.man-woman h2 span{
+    font-weight: normal;
+}
+.man-woman p{
+    font-weight: 200px;
+}
+.man-woman a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d7b399;
+    width: 80px;
+    height: 30px;
+    margin-top: 40px;
+}
+.man-woman a:hover{
+    background: #997656;
+}
+
+/*------------------------------------ section header-menu ----------------------------------------*/
+.header-menu{
+    width: 918px; 
+    height: 17px;
+    margin-top: 61px;
+    margin-left: 405px;
 }
